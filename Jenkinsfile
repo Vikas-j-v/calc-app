@@ -1,12 +1,9 @@
 pipeline {
-    agent any
+        agent {
+        docker { image 'python:3.11-slim' }
+    }
 
     stages {
-        stage('Clone Repository') {
-            steps {
-                git branch: 'main', url: 'https://github.com/vikas-j-v/calc-app.git'
-            }
-        }
 
         stage('Setup Python Environment') {
             steps {
