@@ -13,7 +13,7 @@ pipeline {
 
         stage('Lint Code') {
             steps {
-                sh './venv/bin/flake8 calculator.py --max-line-length=100 || true'
+                sh './venv/bin/flake8 calc.py --max-line-length=100 || true'
             }
         }
 
